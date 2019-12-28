@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
@@ -41,7 +41,10 @@ const AppTabNavigator = createBottomTabNavigator(
 			screen: AddMediaTab,
 			navigationOptions: () => ({
 				tabBarIcon: ({ tintColor }) => (
-					<Icon name='ios-add-circle' style={{ color: tintColor }} />
+					<Icon
+						name='ios-add-circle-outline'
+						style={{ color: tintColor }}
+					/>
 				)
 			})
 		},
@@ -49,7 +52,7 @@ const AppTabNavigator = createBottomTabNavigator(
 			screen: LikesTab,
 			navigationOptions: () => ({
 				tabBarIcon: ({ tintColor }) => (
-					<Icon name='md-heart' style={{ color: tintColor }} />
+					<Icon name='md-heart-empty' style={{ color: tintColor }} />
 				)
 			})
 		},
@@ -64,8 +67,8 @@ const AppTabNavigator = createBottomTabNavigator(
 	},
 	{
 		tabBarOptions: {
-			activeTintColor: '#000',
-			inactiveTintColor: '#ccc',
+			activeTintColor: 'black',
+			inactiveTintColor: 'grey',
 			showLabel: false,
 			showIcon: true
 		}
